@@ -3,6 +3,7 @@ load cell weight measurement with hx711 amplifier
 
 Resources: 
 https://github.com/gandalf15/HX711
+
 https://learn.sparkfun.com/tutorials/load-cell-amplifier-hx711-breakout-hookup-guide#load-cell-setup
 
 Circuit explanation:
