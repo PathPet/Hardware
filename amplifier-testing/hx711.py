@@ -41,8 +41,8 @@ def readCount():
             Count=Count+1
             #print Count
         
-  gpio.output(SCK,1)
-  Count=Count^0x800000
+  gpio.output(SCK,0)
+  Count=Count
   #time.sleep(0.001)
   gpio.output(SCK,0)
   return Count  
@@ -56,7 +56,7 @@ flag=0
 while 1:
     count= readCount()
     w=0
-    w=(sample-count)/106
+    w=(sample-count0x800000)/10600
     print w,"g"
 
   
