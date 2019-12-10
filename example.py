@@ -54,7 +54,6 @@ def updateDatabase():
 
         val = hx.get_weight(5)
 		print(val)
-         
 		hx.power_down()
         hx.power_up()
 		time.sleep(5)
