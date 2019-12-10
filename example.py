@@ -46,13 +46,13 @@ hx.reset()
 
 hx.tare()
 
+print("Tare done! Add weight now...")
+
 firebase = firebase.FirebaseApplication('https://raspberrypi-1443d.firebaseio.com/', None)
 
 def updateDatabase():
 
         val = hx.get_weight(5)
-
-        print("Tare done! Add weight now...")
         
 		sleep(5)
 		print(val)
