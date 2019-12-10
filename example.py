@@ -53,20 +53,18 @@ firebase = firebase.FirebaseApplication('https://raspberrypi-1443d.firebaseio.co
 def updateDatabase():
 
         val = hx.get_weight(5)
-        
-		sleep(5)
 		print(val)
          
 		hx.power_down()
         hx.power_up()
-		
+		time.sleep(5)
 		data = {"weight": val}
-	    firebase.post('/sensor/dht', data)
+	    firebase.post('/sensor/loadcell', data)
 
 
 while True:
     try:
-	     updateDatabase()
+	     updateDabase()
         
     except (KeyboardInterrupt, SystemExit):
         cleanAndExit()
