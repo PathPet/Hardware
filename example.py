@@ -66,7 +66,7 @@ def updateDatabase():
 
 while True:
     try:
-	     updateDabase()
+	     updateDatabase()
         
     except (KeyboardInterrupt, SystemExit):
         cleanAndExit()
