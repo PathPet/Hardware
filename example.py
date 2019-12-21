@@ -23,7 +23,7 @@ def cleanAndExit():
         
     print("Bye!")
     sys.exit()
-	
+    
 
 #this values are corresponding to gpio pins which connected to clk and dat inputs in hx711 amplifier.
 
@@ -53,17 +53,17 @@ firebase = firebase.FirebaseApplication('https://raspberrypi-1443d.firebaseio.co
 def updateDatabase():
 
         val = hx.get_weight(5)
-		print(val)
-		hx.power_down()
+        print(val)  
+        hx.power_down()
         hx.power_up()
-		time.sleep(5)
-		data = {"weight": val}
-		#firebase.post('/sensor/loadcell', data)
-		firebase.put('/sensor/loadcell/-Lvm1JIc-4NoIjDkVdqR', data)
+        time.sleep(5)
+        data = {"weight": val}
+        firebase.put('/sensor/loadcell/-Lvm1JIc-4NoIjDkVdqR','weight', val)
+
 
 while True:
     try:
-	     updateDatabase()
+         updateDatabase()
         
     except (KeyboardInterrupt, SystemExit):
         cleanAndExit()
