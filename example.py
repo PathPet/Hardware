@@ -58,8 +58,8 @@ def updateDatabase():
         hx.power_up()
 		time.sleep(5)
 		data = {"weight": val}
-	    firebase.post('/sensor/loadcell', data)
-
+		#firebase.post('/sensor/loadcell', data)
+		firebase.put('/sensor/loadcell/-Lvm1JIc-4NoIjDkVdqR', data)
 
 while True:
     try:
