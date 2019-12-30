@@ -15,4 +15,4 @@ Hardwares:
 -Breadboards
 -Raspberry Pi 3B model
 
-Remote Connection: SSH connection on android and windows via PuTTy
+Remote Connection: SSH connection on android via ConnectBot and on Windows via PuTTy
